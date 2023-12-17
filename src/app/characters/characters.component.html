@@ -1,0 +1,15 @@
+    <div class="row d-flex justify-content-center">
+    @for (character of characters; track $index) {
+        <div class="card" style="width: 300px">
+            <img class="card-img-top" src={{character.image}} alt="Card image cap" >
+            <div class="card-body">
+              <h5 class="card-title">{{character.name}}</h5>
+              <div class="d-flex justify-content-center">
+                <a routerLink="/characters/{{character.id}}" class="btn btn-warning btn-sm">See more</a>
+                <a routerLink="/char-edit/{{character.id}}" class="btn btn-secondary btn-sm">Edit</a>
+                <a class="btn btn-danger btn-sm" (click)="delete_char(character.id)">Delete</a>
+              </div>
+            </div>
+          </div>
+    }
+    </div> 

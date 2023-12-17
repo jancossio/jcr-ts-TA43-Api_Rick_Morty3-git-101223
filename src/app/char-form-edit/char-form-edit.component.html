@@ -1,0 +1,69 @@
+ <form [formGroup]="groupForm">
+
+    <div class="container-md d-flex align-items-center justify-content-center">
+      <div class="row">
+           <div class="col-12 text-center border-2 py-4" id="titulo">
+            <h1>Character edit formulary</h1>
+          </div>
+            <div class="col-3 mt-4 mb-2 px-2">
+              <p class="text-end">Id:</p>
+            </div>
+            <div class="col-8 mt-4">
+                <input id="id" type="number" formControlName="id" class="form-control" placeholder="0">
+                <span *ngIf="groupForm.status=='INVALID'" class="text-danger">The ID is required.</span>
+            </div>
+            <div class="col-3 mt-4 mb-2 px-2">
+              <p class="text-end">Name:</p>
+            </div>
+            <div class="col-8 mt-4 mb-2">
+                <input id="name" type="text" formControlName="name" class="form-control" placeholder="Slo-mobius">
+                <span *ngIf="groupForm.status=='INVALID'" class="text-danger">A name is required.</span>
+            </div>
+            <div class="col-3 mt-4 mb-2 px-2">
+              <p class="text-end">Status:</p>
+            </div>
+            <div class="col-8 mt-4 mb-2 px-2">
+              <input id="status" type="text" formControlName="status" class="form-control" placeholder="Alive/Death">
+              <span *ngIf="groupForm.status=='INVALID'" class="text-danger">A status is required.</span>
+            </div>
+            <div class="col-3 mt-4 mb-2 px-2">
+              <p class="text-end">Species:</p>
+            </div>
+            <div class="col-8 mt-4 mb-2 px-2">
+                <input #formAnswer type="text" id="species" formControlName="species" class="form-control" placeholder="Human">
+                <span *ngIf="groupForm.status=='INVALID'" class="text-danger">A species is required.</span>
+            </div>
+            <div class="col-3 mt-4 mb-2 px-2">
+                <p class="text-end">Gender:</p>
+              </div>
+              <div class="col-8 mt-4">
+                  <input id="gender" type="text" formControlName="gender" class="form-control" placeholder="Male">
+                  <span *ngIf="groupForm.status=='INVALID'" class="text-danger">A gender is required.</span>
+              </div>
+              <div class="col-3 mt-4 mb-2 px-2">
+                <p class="text-end">Origin:</p>
+              </div>
+              <div class="col-8 mt-4 mb-2">
+                  <input id="origin" type="text" formControlName="origin" class="form-control" placeholder="Earth-C-137">
+                  <span *ngIf="groupForm.status=='INVALID'" class="text-danger">An origin is required.</span>
+              </div>
+              <div class="col-3 mt-4 mb-2 px-2">
+                <p class="text-end">Location:</p>
+              </div>
+              <div class="col-8 mt-4 mb-2 px-2">
+                <input id="location" type="text" formControlName="location" class="form-control" placeholder="Last location">
+                <span *ngIf="groupForm.status=='INVALID'" class="text-danger">A location is required.</span>
+              </div>
+              <div class="col-3 mt-4 mb-2 px-2">
+                <p class="text-end">Image:</p>
+              </div>
+              <div class="col-8 mt-4 mb-2 px-2">
+                <input id="image" type="text" formControlName="image" class="form-control" placeholder="Image">
+                <span *ngIf="groupForm.status=='INVALID'" class="text-danger">An image is required.</span>
+              </div>
+            <div class="col-12 mt-4 mb-4 text-center">
+              <button class="btn btn-success rounded border-0" type="submit" [disabled]="!groupForm.valid" (click)="update_char()">Update Character</button>
+            </div>
+      </div>
+    </div>
+  </form>

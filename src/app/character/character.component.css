@@ -1,0 +1,21 @@
+.card{
+    background-color: rgb(245, 245, 245);
+}
+
+.row{
+    margin: 2vw;
+}
+
+.img{
+    border-radius: 7px;
+    height: 375px;
+    width: 375px;
+}
+
+#content{
+    margin-top: 40px;
+}
+
+p{
+    font-size: 20px;
+}
